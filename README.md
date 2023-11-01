@@ -63,4 +63,4 @@ flat, err := flatten.FlattenString(nested, "", emdash, true)
 // output: `{ "one--two--0": "2a", "one--two--1": "2b", "side": "value" }`
 ```
 
-See [godoc](https://godoc.org/github.com/jeremywohl/flatten) for API.
+See [godoc](https://godoc.org/github.com/bcbee/flatten) for API.
