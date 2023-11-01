@@ -1,7 +1,7 @@
 flatten
 =======
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/jeremywohl/flatten.svg)](https://pkg.go.dev/github.com/jeremywohl/flatten)
+[![Go Reference](https://pkg.go.dev/badge/github.com/bcbee/flatten.svg)](https://pkg.go.dev/github.com/bcbee/flatten)
 
 **Note: development continues in [v2](/v2)**
 
