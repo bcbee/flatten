@@ -205,7 +205,7 @@ func TestFlatten(t *testing.T) {
 			t.Errorf("%d: failed to unmarshal test: %v", i+1, err)
 			continue
 		}
-		got, err := Flatten(m.(map[string]interface{}), test.prefix, test.style)
+		got, err := Flatten(m.(map[string]interface{}), test.prefix, test.style, true)
 		if err != nil {
 			t.Errorf("%d: failed to flatten: %v", i+1, err)
 			continue
@@ -337,7 +337,7 @@ func TestFlattenString(t *testing.T) {
 	}
 
 	for i, test := range cases {
-		got, err := FlattenString(test.test, test.prefix, test.style)
+		got, err := FlattenString(test.test, test.prefix, test.style, true)
 		if err != test.err {
 			t.Errorf("%d: error mismatch, got: [%v], wanted: [%v]", i+1, err, test.err)
 			continue

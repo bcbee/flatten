@@ -26,7 +26,7 @@ nested := `{
   "side": "value"
 }`
 
-flat, err := flatten.FlattenString(nested, "", flatten.DotStyle)
+flat, err := flatten.FlattenString(nested, "", flatten.DotStyle, true)
 
 // output: `{ "one.two.0": "2a", "one.two.1": "2b", "side": "value" }`
 ```
@@ -43,7 +43,7 @@ nested := map[string]interface{}{
    "z": 1.4567,
 }
 
-flat, err := flatten.Flatten(nested, "", flatten.RailsStyle)
+flat, err := flatten.Flatten(nested, "", flatten.RailsStyle, true)
 
 // output:
 // map[string]interface{}{
@@ -58,7 +58,7 @@ Let's try a custom style, with the first example above.
 
 ```go
 emdash := flatten.SeparatorStyle{Middle: "--"}
-flat, err := flatten.FlattenString(nested, "", emdash)
+flat, err := flatten.FlattenString(nested, "", emdash, true)
 
 // output: `{ "one--two--0": "2a", "one--two--1": "2b", "side": "value" }`
 ```
